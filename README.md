@@ -18,3 +18,8 @@ $ python config.py runserver
 As the development environment is the only one implemented so far this should
 start the application on a local development server and is then accessible
 in your web browser at `http://localhost:5000`.
+
+## License
+
+This code is distributed under the BSD 3-Clause License.
+Please read LICENSE for more details.
