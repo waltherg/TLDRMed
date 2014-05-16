@@ -15,6 +15,7 @@ WTForms==1.0.5
 Werkzeug==0.9.4
 alembic==0.6.5
 blinker==1.3
+gunicorn==18.0
 itsdangerous==0.24
 lxml==3.3.5
 nltk==2.0.4
