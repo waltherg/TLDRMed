@@ -13,9 +13,19 @@
   <h1>You Searched For</h1>
 </div>
 <p>
+  {% for keyword in keywords %}
+  {{ keyword }}
+  {% endfor %}
+</p>
+{% endif %}
+{% if pmids %}
+<div class="page-header">
+  <h1>PubMed Returned the Following PubMed ID's</h1>
+</div>
+<p>
   <ul>
-    {% for keyword in keywords %}
-    <li>{{ keyword }}</li>
+    {% for pmid in pmids %}
+    <li>{{ pmid }}</li>
     {% endfor %}
   </ul>
 </p>
