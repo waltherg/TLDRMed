@@ -1,11 +1,12 @@
 from datetime import datetime
-from flask import render_template, session, redirect, url_for
+from flask import render_template, session, redirect, url_for, flash
 from . import main
 from .forms import KeywordsForm
 from .. import db
 from ..models import Article
 import requests
 from lxml import etree
+
 
 ENTREZ_ADDRESS = ('http://eutils.ncbi.nlm.nih.gov/entrez/eutils/'
                   'esearch.fcgi?db=pubmed&term=PLoS%20*[journal]')
@@ -31,6 +32,10 @@ def index():
                 pass
 
         return redirect(url_for('.index'))
+
+    flash('I am in the process of redoing TLDRMed and have not yet ported '
+          'all features over to my new codebase.\n'
+          'Watch this space for updates.')
 
     return render_template('index.html',
                            form=form,
